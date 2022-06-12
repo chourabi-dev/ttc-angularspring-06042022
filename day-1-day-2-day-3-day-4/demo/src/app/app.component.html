@@ -1,0 +1,215 @@
+<!-- {{  }}  => toString() -->
+<!-- <h1> {{ projectName }} </h1>
+
+<p>
+    {{ year }}
+</p>
+
+<p> 
+     {{ user }}
+</p> 
+<p>
+     
+</p>
+
+<p>
+    {{ 1+1 }}
+</p> -->
+
+
+
+<!-- *ngFor -->
+<!--<ul>
+    <li  *ngFor="let employee of employees"   >
+        
+        
+
+        <!-- bad practice-->
+        <!--<h3 *ngIf=" employee.year < 2010 "  class="old-employee">{{ employee.fullname }}</h3>
+        <h3 *ngIf=" employee.year >= 2010 " class="new-employee" >{{ employee.fullname }}</h3>-->
+        
+
+        <!-- ngClass-->
+        <!-- attr html modification [] -->
+       <!-- <h3 [ngClass]="employee.year < 2010 ? 'old-employee'  : 'new-employee'  " >
+            {{ employee.fullname }}
+        </h3>
+       
+
+       <p>
+           <small>{{ employee.email }}</small>
+           /
+           <small>{{ employee.phone }}</small>
+       </p>
+    </li>
+    
+</ul>-->
+
+<!-- *ngIf -->
+
+
+<!-- 
+<div *ngIf=" affichageBloc  " >
+    <h1>Weclome</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sequi voluptas, suscipit magni iusto saepe inventore praesentium nostrum in et itaque doloribus ratione cumque dicta ut deserunt est. Fugiat, rem.
+    </p>
+</div>
+-->
+
+
+<!--*******************************************************************-->
+
+
+ <!--            
+<img width="250px" [src]="photoURL" alt="">
+
+
+
+<h1 [style.color]=" myColor " [style.fontSize]=" mySize+'px' " >
+    Weclome to my app
+</h1>-->       
+
+
+
+<!--- events -->
+
+<!--
+<button (click)="mouseClick()"  >
+    click me
+</button>
+-->
+
+<!--
+<div>
+    <button (click)="likeButtonClick()" >
+        {{ likes }} 
+        
+        {{ didLike == true ? 'Dislike' : 'Like' }}
+    </button>
+</div>
+
+-->
+
+
+
+<!-- collapse -->
+<!--
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatum magni, labore iusto dignissimos porro corporis eveniet id quae at fuga deleniti illum fugit dicta. Sapiente perferendis quod voluptatibus perspiciatis!
+    <span 
+    *ngIf=" isOpned == false "  
+    (click)="readMore()" 
+    style="color: blue;">voir plus</span>
+</p>
+
+<p *ngIf=" isOpned == true " >
+
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam accusantium repellat quis voluptas at sit tempore maiores magni quisquam tempora, vitae, non architecto facilis hic? Quibusdam dolore porro quasi officiis.
+    Esse molestias harum cumque assumenda recusandae neque consequuntur! Neque veritatis illum iste rem commodi in! Veritatis ducimus molestias facere illo voluptate, quis quos asperiores necessitatibus sit incidunt officiis eius libero.
+    Fuga sapiente enim nihil, voluptates aut laborum, laudantium ex qui fugiat aperiam reprehenderit consequatur tempora maiores laboriosam dolores neque dignissimos unde natus, possimus eveniet. Beatae a autem dolorem quos sapiente.
+
+    <span (click)="readLess()" style="color: blue;">reduire</span>
+</p>-->
+
+<!--
+<div class="toolbar">
+    <div>
+        <input type="color" 
+        (change)="changeColor($event)">
+    </div>
+
+    <div>
+        <button (click)="decrementSize()">-</button>
+        <p>
+            {{size}}px
+        </p>
+        <button (click)="incrementSize()">+</button>
+    </div>
+</div>
+ 
+<div class="content"  
+    [style.fontSize]="size+'px'"
+    [style.color]="color"
+>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure deleniti tenetur. Corporis itaque quod commodi recusandae nam modi quam, fugiat saepe eligendi cumque officiis adipisci quis eius doloribus illum?
+    Laborum deserunt explicabo voluptatem, enim sapiente officiis illo incidunt libero natus itaque, accusamus beatae similique nam aliquid eos facilis cum optio iusto quam quae modi. Vel explicabo sunt nesciunt repellat!
+    Sint, error ratione accusamus quo iure consequuntur atque neque consectetur quam dignissimos numquam ducimus! Dolorum, similique eos doloremque libero necessitatibus corporis earum, temporibus nulla tenetur iure ipsum non id dolore?
+    Aperiam voluptatibus repudiandae doloremque exercitationem fuga in nulla vel rerum quas, provident officiis similique quibusdam qui repellendus facilis voluptatum, non accusantium animi saepe! Aspernatur molestiae illum sapiente, minus aut excepturi.
+    Quae ipsam voluptatibus vitae aperiam! Dolore doloremque aliquam iste. Illum libero quisquam dicta qui odio ex veritatis, eum reprehenderit suscipit fugit expedita officia repellat cumque necessitatibus. Illum, quaerat delectus! Eum?
+</div>-->
+
+
+
+
+<!-- SHOPPING LIST -->
+
+<!--<h3>Shopping List</h3>
+<ul>
+
+    <li *ngFor="let p of products;let i = index;">
+
+        <p>
+            <strong>{{ p.product }}</strong> <br>
+            <small> {{ p.date }}</small>
+            <br>
+            <button (click)="removeShoppingItem(i)">delete</button>
+        </p>
+    </li>
+
+</ul>
+
+
+<div class="bar">
+    <div>
+        <input type="text" (keyup)="typing($event)" >
+    </div> 
+</div>-->
+
+
+<!-- search array -->
+
+
+<!--
+<input type="search" (keyup)="searching($event)">
+<ul>
+    <li *ngFor="let f of searchArray">{{ f }}</li>
+</ul>-->
+
+
+
+<p>
+    {{   today | date:'medium' }}
+</p>
+
+<p>
+    {{ 154454785124 | number  }}
+</p>
+
+
+<p>
+    {{ 15000 | currency:'TND' }}
+</p>
+
+
+<p>
+    {{ 'azertyu' | uppercase }}
+</p>
+
+<p>
+    {{ 'AZERTY' | lowercase }}
+</p>
+
+
+
+<p>
+
+    {{ 'tchourabi@gmail.com' | email }}
+</p>
+
+
+
+<p>
+
+    {{ 'test@yahoo.fr' | email }}
+</p>

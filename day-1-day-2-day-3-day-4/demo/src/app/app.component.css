@@ -1,0 +1,16 @@
+.old-employee{
+    color: green;
+}
+
+.new-employee{
+    color: orange;
+}
+
+.toolbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar{
+    display: flex;
+}
