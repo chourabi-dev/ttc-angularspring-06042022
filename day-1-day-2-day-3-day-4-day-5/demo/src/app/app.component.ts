@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Employee } from './models/Employee';
 
 @Component({
@@ -174,5 +175,36 @@ export class AppComponent {
   /***************************************** */
 
   today = new Date();
+
+
+
+
+  /******************************************* forms *************************************/
+
+
+  employeeForm = new FormGroup({
+    firstname : new FormControl('',[ Validators.required,Validators.minLength(6) ]),
+    lastname : new FormControl('',Validators.required),
+    email : new FormControl('',   [ Validators.required, Validators.email ]  ),
+    address : new FormGroup({
+      city: new FormControl('',Validators.required),
+      zipcode: new FormControl('',Validators.required),
+      
+    })
+    
+  })
+
+
+  addEmployee(){
+    // get the form value
+
+    const value = this.employeeForm.value;
+
+    console.log(value);
+    
+  }
+
+
+
 
 }

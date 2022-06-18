@@ -175,8 +175,7 @@
 <ul>
     <li *ngFor="let f of searchArray">{{ f }}</li>
 </ul>-->
-
-
+<!--
 
 <p>
     {{   today | date:'medium' }}
@@ -212,4 +211,107 @@
 <p>
 
     {{ 'test@yahoo.fr' | email }}
+</p>-->
+
+
+
+
+<!-- ********************** forms *************************** -->
+
+<!--
+<p>
+    {{ employeeForm.valid }}
 </p>
+
+<p>
+    {{ employeeForm.status }}
+</p>
+
+<form [formGroup]="employeeForm" (ngSubmit)="addEmployee()" >
+    <div>
+        <label > first name    
+            <span  *ngIf=" employeeForm.controls.firstname.valid == false " style="color: red;">*</span>  
+        </label> <br>
+
+
+        <input type="text" placeholder="first name" formControlName="firstname">
+        <p>
+            <small style="color: gray;">first name must be 6 chars at least</small>
+        </p>
+    </div>
+    <div>
+        <label > last name  <span  *ngIf=" employeeForm.controls.lastname.valid == false " style="color: red;">*</span></label> <br>
+        <input type="text" placeholder="first name" formControlName="lastname">
+    </div>
+
+    <div>
+        <label > Email <span  *ngIf=" employeeForm.controls.email.valid == false " style="color: red;">*</span></label> <br>
+        <input type="email" placeholder="first name" formControlName="email">
+    </div>
+    
+    <div formGroupName="address" >
+
+        <div>
+            <label > city </label> <br>
+            <input type="text" placeholder="first name" formControlName="city">
+        </div>
+        
+
+        <div>
+            <label > zip code </label> <br>
+            <input type="text" placeholder="first name" formControlName="zipcode">
+        </div>
+        
+    
+        
+    </div>
+
+    <div>
+        <button type="submit" [disabled]=" ! employeeForm.valid">ajouter</button>
+    </div>
+    
+
+</form>-->
+
+
+
+<!-- ****************************** bootstrap + components ********************************* -->
+
+
+<app-navbar></app-navbar>
+
+
+
+<div class="container mt-5">
+
+
+    <div class="row">
+        <div class="col-sm-3">
+            <app-sidemenu></app-sidemenu>
+        </div>
+
+        <div class="col-sm-9">
+            <h3>Articles</h3>
+
+
+            <div class="col-12">
+                <app-article></app-article>
+            </div>
+            <div class="col-12">
+                <app-article></app-article>
+            </div>
+            <div class="col-12">
+                <app-article></app-article>
+            </div>
+            <div class="col-12">
+                <app-article></app-article>
+            </div>
+            <div class="col-12">
+                <app-article></app-article>
+            </div>
+            
+
+        </div>
+    </div>
+
+</div>
