@@ -25,3 +25,19 @@ npm i bootstrap
 add new componenet
 
 ng g c comp_name
+
+
+
+
+
+add new guard
+
+ng g g guard_name
+
+
+add new service
+
+ng g s service_name
+
+
+

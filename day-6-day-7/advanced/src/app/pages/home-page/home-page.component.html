@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-5">
+    <h3>Our latest articles</h3>
+
+    <ul>
+        <li *ngFor="let a of articles">
+            <h3>{{ a.title }}</h3>
+            <p>
+                <a [routerLink]=" '/article-details/'+a.id  ">read more</a>
+            </p>
+        </li>
+    </ul>
+</div>
