@@ -41,3 +41,5 @@ ng g s service_name
 
 
 
+ng g m module_name --route "auth" --module app.module
+

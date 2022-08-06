@@ -17,4 +17,9 @@ export class CartComponent implements OnInit {
   
   }
 
+
+  addProductToCart(p){
+
+  }
+
 }
