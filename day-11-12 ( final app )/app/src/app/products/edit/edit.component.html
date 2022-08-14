@@ -1,0 +1,57 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Edit  products</h1>
+    <a routerLink="/products" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-arrow-left fa-sm text-white-50"></i> Back</a>
+</div>
+
+
+
+
+<div class="card card-body mt-5">
+
+    <form [formGroup]="form" (ngSubmit)="save()" >
+        <div class="form-group mb-3">
+            <label for="">Title</label>
+            <input type="text" class="form-control" formControlName="title">
+        </div>
+        <div class="form-group mb-3">
+            <label for="">Price</label>
+            <input type="text" class="form-control" formControlName="price">
+        </div>
+        <div class="form-group mb-3">
+            <label for="">Quantity</label>
+            <input type="text" class="form-control" formControlName="quantity">
+        </div>
+        <div class="form-group mb-3">
+            <label for="">Category</label>
+            <select type="text" class="form-control" formControlName="category">
+                <option [value]="c.id" *ngFor="let c of categories">{{ c.name }}</option>
+            </select>
+        </div>
+        
+
+
+        
+
+
+
+        <div class="mb-5">
+            <button type="submit" class="btn btn-success">Save</button>
+        </div>
+
+ 
+
+
+            <div *ngIf="successMessage != '' " class="alert alert-success">
+                {{ successMessage }}
+            </div>
+
+            <div *ngIf="errorMessage != '' " class="alert alert-danger">
+                {{ errorMessage }}
+            </div>
+
+        
+
+
+
+    </form>
+</div>

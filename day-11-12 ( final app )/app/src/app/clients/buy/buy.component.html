@@ -1,0 +1,69 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Buy product</h1>
+    <a routerLink="/clients" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i> Back</a>
+</div>
+
+
+
+
+<div class="card card-body mt-5">
+    <form [formGroup]="form" (ngSubmit)="buy()" >
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="">Product</label>
+                <select class="form-control" formControlName="product">
+                    <option value="">please choose a product</option>
+                    <option *ngFor="let p of products" [value]="p.id">{{ p.title }}</option>
+
+
+                    
+                </select>
+            </div>
+            <div class="col-sm-6">
+                <label for="">Quantity</label>
+                <input type="number" class="form-control" formControlName="quantity">
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <button [disabled]="! form.valid" type="submit" class="btn btn-primary">Buy product</button>
+        </div>
+    </form>
+
+
+
+    <div *ngIf="successMessage != '' " class="alert alert-success mt-5">
+        {{ successMessage }}
+    </div>
+
+    <div *ngIf="errorMessage != '' " class="alert alert-danger mt-5">
+        {{ errorMessage }}
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="card card-body mt-5">
+    <table class="table" >
+        <tbody>
+            <tr *ngFor="let s of sells">
+                <td>{{s.id}}</td>
+                <td>{{s.product.title}}</td>
+                <td>{{s.product.price}}</td>
+                
+                <td>{{s.quantity}}</td>
+                <td>{{s.datetime | date:'medium'}}</td>
+                
+                
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
